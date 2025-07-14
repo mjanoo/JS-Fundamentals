@@ -5,11 +5,12 @@ Otherwise, print “Arguments found”
 You must use console.log(...) to print all output
 You are not allowed to use var */
  
-const count = process.argv.length;
-if(count === 2){
-    console.log("No argument");
-} else if (count === 3) {
-    console.log("Argument Found");
+const args = process.argv.slice(2);
+
+if (args.length === 0) {
+  console.log("No argument");
+} else if (args.length === 1) {
+  console.log("Argument found");
 } else {
-    console.log("Arguments Found");
+  console.log("Arguments found");
 }
