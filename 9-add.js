@@ -7,14 +7,20 @@
     You must use a loop (while, for, etc.)
  */
 
-    if (isNaN(parseInt(process.argv[2]))) {
-  console.log('Missing size');
-} else {
-  for (let it = 0; it < process.argv[2]; it++) {
-    let row = '';
-    for (let ji = 0; ji < process.argv[2]; ji++) {
-      row = row + 'X';
+   const agrCount = process.argv;
+const firstArg = process.argv[2];
+
+let num = Number(firstArg);
+
+if (!isNaN(num)) {
+    for (let i = 0; i < num; i++) {
+        let row = ""; // عملنا دا عشان نعرف ان روو دا سترينج 
+        for (let j = 0; j < num; j++) {
+        row += "X"; // عملنا دى عشان مش هنقدر نطبع كل عدداكس جمب بعض فى سطر واحد 
+        }
+        console.log(row); // فبنضطر نخلى مجموعة اكس مع بعض سطر واحد و نطبع السطر على بعضه
     }
-    console.log(row);
-  }
+}
+else{
+    console.log("Missing size");
 }
