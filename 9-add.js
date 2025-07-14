@@ -7,18 +7,14 @@
     You must use a loop (while, for, etc.)
  */
 
-const process = require('process');
-const myVar = process.argv;
-
-if (parseInt(myVar[2])) {
-  const myNum = Number(myVar[2]);
-  for (let i = 0; i < myNum; i++) {
-    let myStr = '';
-    for (let j = 0; j < myNum; j++) {
-      myStr += 'X';
-    }
-    console.log(myStr);
-  }
-} else {
-  console.log('Missing size');
+// Define the add function
+function add(a, b) {
+  return a + b;
 }
+
+// Get the command-line arguments
+const a = parseInt(process.argv[2]);
+const b = parseInt(process.argv[3]);
+
+// Call the function and print the result
+console.log(add(a, b));
