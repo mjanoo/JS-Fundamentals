@@ -5,13 +5,6 @@ Otherwise, print “Arguments found”
 You must use console.log(...) to print all output
 You are not allowed to use var */
  
-const { argv } = require('node:process');
-if (argv.length <= 2) {
-  console.log('No argument');
-}
-else if (argv.length === 3) {
-  console.log('Argument found');
-}
-else {
-  console.log('Arguments found');
-
+const args = process.argv.slice(2);
+const count = args.length;
+console.log(`${count} ${count === 1 ? 'argument' : 'arguments'}`);
