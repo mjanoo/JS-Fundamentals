@@ -5,6 +5,14 @@ Otherwise, print “Arguments found”
 You must use console.log(...) to print all output
 You are not allowed to use var */
  
-const args = process.argv.length - 2;
-console.log(`${args} ${args === 1 ? 'argument' : 'arguments'}`);
+const count = process.argv.length - 2;
+
+if (count === 0) {
+  console.log("0 argument");
+} else if (count === 1) {
+  console.log("1 argument");
+} else {
+  console.log(`${count} arguments`);
+}
+
 
