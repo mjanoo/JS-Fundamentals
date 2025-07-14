@@ -7,11 +7,18 @@
     You must use a loop (while, for, etc.)
  */
 
-   const square = Number(process.argv[2]);
+const process = require('process');
+const myVar = process.argv;
 
-if (isNaN(square)) {
+if (parseInt(myVar[2])) {
+  const myNum = Number(myVar[2]);
+  for (let i = 0; i < myNum; i++) {
+    let myStr = '';
+    for (let j = 0; j < myNum; j++) {
+      myStr += 'X';
+    }
+    console.log(myStr);
+  }
+} else {
   console.log('Missing size');
-}
-for (let i = 0; i < square; i++) {
-  console.log('X'.repeat(square));
 }
