@@ -8,7 +8,8 @@
     You can use only one console.log
     You must use a loop (while, for, etc.) */
 
-    const array = ['C is fun', 'Python is cool', 'Javascript is amazing'];
-for (let i = 0; i < array.length; i++) {
-  console.log(array[i]);
+   const lines = ['C is fun', 'Python is cool', 'JavaScript is amazing']
+
+for (const line of lines) {
+  console.log(line)
 }
