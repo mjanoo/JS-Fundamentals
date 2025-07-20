@@ -6,13 +6,14 @@ You must use console.log(...) to print all output
 You are not allowed to use var */
  
 const args = process.argv.slice(2);
+const count = args.length;
 
-if (args.length === 0) {
-  console.log("No argument");
-} else if (args.length === 1) {
-  console.log("Argument found");
+if (count === 0) {
+  console.log("0 argument");
+} else if (count === 1) {
+  console.log("1 argument");
 } else {
-  console.log("Arguments found");
+  console.log(`${count} arguments`);
 }
 
 
